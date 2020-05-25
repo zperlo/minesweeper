@@ -7,7 +7,6 @@ public class Game {
     Needs a user able to choose a square to expose
     If bomb hit, game lose, if all squares but bombs hit, game win
     If number hit, number shown, if blank hit, all connected blanks and numbers adjacent to those blanks are revealed
-    User can flag bombs
      */
 
     /*
@@ -20,7 +19,7 @@ public class Game {
 
     public static void main(String[] args) {
         Grid grid = new Grid(10, 4);
+        grid.revealAtIndex(2, 4);
         grid.printGrid();
-        grid.revealAndPrintGrid();
     }
 }
