@@ -19,6 +19,8 @@ public class Game {
      */
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Grid grid = new Grid(10, 4);
+        grid.printGrid();
+        grid.revealAndPrintGrid();
     }
 }

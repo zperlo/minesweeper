@@ -29,4 +29,18 @@ public class Cell {
     public boolean isRevealed() {
         return isRevealed;
     }
+
+    @Override
+    public String toString() {
+        if(isRevealed){
+            if(type == CellType.BLANK){
+                return " ";
+            } else if(type == CellType.NUMBER){
+                return Integer.toString(number);
+            } else {
+                return "B";
+            }
+        }
+        return "?";
+    }
 }

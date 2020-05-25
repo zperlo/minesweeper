@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class Grid {
@@ -56,5 +57,20 @@ public class Grid {
                 }
             }
         }
+    }
+
+    public void printGrid(){
+        for (Cell[] cellArr : grid)
+            System.out.println(Arrays.toString(cellArr));
+    }
+
+    public void revealAndPrintGrid(){
+        for(Cell[] cellArr : grid) {
+            for (Cell cell : cellArr) {
+                cell.reveal();
+            }
+        }
+        for (Cell[] cellArr : grid)
+            System.out.println(Arrays.toString(cellArr));
     }
 }
