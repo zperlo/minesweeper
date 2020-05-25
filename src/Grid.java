@@ -7,8 +7,6 @@ public class Grid {
 
     private Cell[][] grid;
 
-    private int numBombs;
-
     public Grid(int size, int numBombs){
         grid = new Cell[size][size];
 
@@ -18,8 +16,6 @@ public class Grid {
                 grid[i][j] = new Cell();
             }
         }
-
-        this.numBombs = numBombs;
 
         // create bombs
         while(numBombs > 0){
@@ -62,8 +58,13 @@ public class Grid {
     }
 
     public void printGrid(){
-        for (Cell[] cellArr : grid)
-            System.out.println(Arrays.toString(cellArr));
+        String[] cols = new String[grid.length];
+        for(int i = 0; i < cols.length; i++){
+            cols[i] = Integer.toString(i);
+        }
+        System.out.println(" " + Arrays.toString(cols));
+        for (int j = 0; j < grid.length; j++)
+            System.out.println(Integer.toString(j) + Arrays.toString(grid[j]));
     }
 
     public void revealAndPrintGrid(){
